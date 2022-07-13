@@ -11,7 +11,7 @@ import Profile from "./Profile";
 
 const useStyle = makeStyles({
     login: {
-        background: '#FFFFFF',
+        background: '#FFFFFF', 
         color: '#2874f0',
         fontWeight: '700',
         textTransform: 'none',
