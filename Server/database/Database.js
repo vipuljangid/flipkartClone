@@ -1,7 +1,7 @@
 
 import mongoose from 'mongoose';
 
-const url=`mongodb+srv://vipul:vipul@cluster0.gwcdj.mongodb.net/cluster0?retryWrites=true&w=majority`;
+const url=`mongodb+srv://vipul:vipul1@payroll.7r1ghhm.mongodb.net/Flipkart?retryWrites=true&w=majority`;
 const Connection = async()=>{
 
     try {
