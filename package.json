@@ -4,6 +4,6 @@
   },
   "scripts": {
     "start": "concurrently \"cd ./server && npm run start\" \"cd ./client && npm run start\"",
-    "build": " \"cd ./client && npm run build\""
+    "build": "\"cd ./client && npm run build\""
   }
 }
