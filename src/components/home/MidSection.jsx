@@ -16,7 +16,7 @@ const MidSection = () => {
   const classes = useStyle();
   return (
     <Box className={classes.wrapper}>
-      {ImageURL.map(image => (
+      {ImageURL?.map(image => (
         <img src={image} style={{ width: '33%' }} />
       ))}
     </Box>

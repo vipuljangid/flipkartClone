@@ -85,7 +85,7 @@ const Cart = ({ match }) => {
                         <Box className={classes.header}>
                             <Typography style={{ fontWeight: 600, fontSize: 18 }}>My Cart ({cartItems?.length})</Typography>
                         </Box>
-                        {cartItems.map(item => (
+                        {cartItems?.map(item => (
                             <CartItem item={item} removeItemFromCart={removeItemFromCart} />
                         ))
                         }

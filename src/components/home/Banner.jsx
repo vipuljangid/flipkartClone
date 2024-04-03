@@ -22,7 +22,7 @@ const Banner = () => {
     navButtonsAlwaysVisible={true}
     >
     {
-        BannerData.map(image=>(
+        BannerData?.map(image=>(
           <img src={image} className={classes.image}/>
         ))
     }

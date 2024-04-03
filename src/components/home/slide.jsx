@@ -120,7 +120,7 @@ const Slide = ({ title, timer}) => {
         showDots={false}
       >
         {
-          products.map(product => (
+          products?.map(product => (
             <Link to={`product/${product.id}`}>
             <Box textAlign="center" className={classes.wrapper}>
               <img src={product.url} className={classes.img} />

@@ -25,7 +25,7 @@ const Category = () => {
     const classes=useStyle();
   return (
     <Box className={classes.component}>
-        {CategoryData.map(data=>(
+        {CategoryData?.map(data=>(
             <Box className={classes.CategoryData} >
               <img className={classes.CategoryImg} src={data.url}/>
               <Typography className={classes.CategoryText} >{data.text}</Typography>
