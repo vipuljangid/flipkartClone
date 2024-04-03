@@ -79,7 +79,7 @@ const Cart = ({ match }) => {
 
     return (
         <>
-            {cartItems.length ?
+            {cartItems?.length ?
                 <Grid container className={classes.component}>
                     <Grid item lg={9} md={9} sm={12} xs={12} className={classes.leftComponent}>
                         <Box className={classes.header}>

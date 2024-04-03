@@ -9,12 +9,12 @@ import router from './routes/router.js';
 import dotenv from 'dotenv';
 const app=express();
 
+dotenv.config()
 app.use(bodyParser.json({extended:true}))
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(cors())
 const port=8000;
 app.use('/',router)
-dotenv.config()
 const username=process.env.DB_USERNAME
 const password=process.env.DB_PASSWORD
 Connection();

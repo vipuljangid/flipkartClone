@@ -1,7 +1,11 @@
 
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 
-const url=`mongodb+srv://vipul:vipul1@payroll.7r1ghhm.mongodb.net/Flipkart?retryWrites=true&w=majority`;
+
+dotenv.config()
+const url=process.env.MONGODB
+
 const Connection = async()=>{
 
     try {

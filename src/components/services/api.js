@@ -1,10 +1,10 @@
 import axios from 'axios'
+import { host } from '../../constant'
 
-const url='http://localhost:8000'
 
 export const authenticateSignup= async(user)=>{
     try {
-        return await axios.post(`${url}/signup`,user)
+        return await axios.post(`${host}signup`,user)
     } catch (error) {
         console.error('Error: while calling signup api',error.message)
         
@@ -13,7 +13,7 @@ export const authenticateSignup= async(user)=>{
 
 export const authenticateLogin= async(user)=>{
     try {
-        return await axios.post(`${url}/login`,user)
+        return await axios.post(`${host}login`,user)
     } catch (error) {
         console.error('Error: while calling login api',error.message)
         
