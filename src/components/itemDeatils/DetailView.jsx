@@ -88,7 +88,7 @@ const DetailView = ({ match }) => {
 
   // const {params} = useParams();
   useEffect(() => {
-    dispatch(getProductDetails(match.params.id))
+    dispatch(getProductDetails(match?.params?.id))
   }, [dispatch])
   return (
     <Box className={classes.component}>
@@ -98,12 +98,12 @@ const DetailView = ({ match }) => {
             <DetailLeft product={product}/>
           </Box>
           <Box className={classes.right}>
-            <Typography>{product.title.longTitle}</Typography>
+            <Typography>{product?.title?.longTitle}</Typography>
             <Typography className={clsx(classes.smallText, classes.greyText)}><span className={classes.rating}> 4.3<img src="star" /></span> 25 Ratings & 5 Reviews <span >< img src={fassured} alt="Flipkart Assured" className={classes.assured} /></span></Typography>
             <Typography>
               <span style={{ fontSize: '30px', fontWeight: '500' }}>₹{product.price.cost}</span> &nbsp; &nbsp; &nbsp;
-              <span className={classes.greyText} style={{ fontSize: '16px' }}><strike>₹{product.price.mrp}</strike></span> &nbsp; &nbsp; &nbsp;
-              <span style={{ fontSize: '16px', color: '#388e3c', fontWeight: '550' }}>{product.price.discount}off</span> &nbsp; &nbsp; &nbsp;
+              <span className={classes.greyText} style={{ fontSize: '16px' }}><strike>₹{product?.price?.mrp}</strike></span> &nbsp; &nbsp; &nbsp;
+              <span style={{ fontSize: '16px', color: '#388e3c', fontWeight: '550' }}>{product?.price?.discount}off</span> &nbsp; &nbsp; &nbsp;
             </Typography>
 
             <Box className={classes.offer}>
