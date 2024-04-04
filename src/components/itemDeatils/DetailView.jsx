@@ -5,7 +5,7 @@ import { Box, makeStyles, Table, TableBody, TableCell, TableRow, Typography } fr
 import clsx from 'clsx'
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import { DetailLeft } from './DetailLeft';
-
+import { products } from '../home/slide';
 
 
 
@@ -84,7 +84,13 @@ const DetailView = ({ match }) => {
   const fassured = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/fa_62673a.png'
   const sellerURL = 'https://rukminim1.flixcart.com/lockin/774/185/images/CCO__PP_2019-07-14.png?q=50';
   const date = new Date(new Date().getTime() + (5 * 24 * 60 * 60 * 1000))
-  const { product } = useSelector(state => state.getProductDetails)
+  // const { product } = useSelector(state => state.getProductDetails)
+
+
+
+  const product=products?.find((ele)=>ele?.id===match?.params?.id)
+  // const product=products?.find((id)=>console.log(id.id))
+  console.log("product===>",product)
 
   // const {params} = useParams();
   useEffect(() => {
@@ -101,7 +107,7 @@ const DetailView = ({ match }) => {
             <Typography>{product?.title?.longTitle}</Typography>
             <Typography className={clsx(classes.smallText, classes.greyText)}><span className={classes.rating}> 4.3<img src="star" /></span> 25 Ratings & 5 Reviews <span >< img src={fassured} alt="Flipkart Assured" className={classes.assured} /></span></Typography>
             <Typography>
-              <span style={{ fontSize: '30px', fontWeight: '500' }}>₹{product.price.cost}</span> &nbsp; &nbsp; &nbsp;
+              <span style={{ fontSize: '30px', fontWeight: '500' }}>₹{product?.price?.cost}</span> &nbsp; &nbsp; &nbsp;
               <span className={classes.greyText} style={{ fontSize: '16px' }}><strike>₹{product?.price?.mrp}</strike></span> &nbsp; &nbsp; &nbsp;
               <span style={{ fontSize: '16px', color: '#388e3c', fontWeight: '550' }}>{product?.price?.discount}off</span> &nbsp; &nbsp; &nbsp;
             </Typography>
