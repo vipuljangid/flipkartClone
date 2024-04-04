@@ -121,12 +121,12 @@ const Slide = ({ title, timer}) => {
       >
         {
           products?.map(product => (
-            <Link to={`product/${product.id}`}>
+            <Link to={`product/${product?.id}`}>
             <Box textAlign="center" className={classes.wrapper}>
-              <img src={product.url} className={classes.img} />
-              <Typography className={classes.text} style={{ fontWeight: '600' }}>{product.title.shortTitle}</Typography>
-              <Typography className={classes.text} style={{ color: 'green' }}>{product.discount}</Typography>
-              <Typography className={classes.text} style={{ opacity: '0.7' }}>{product.tagline}</Typography>
+              <img src={product?.url} className={classes.img} />
+              <Typography className={classes.text} style={{ fontWeight: '600' }}>{product?.title.shortTitle}</Typography>
+              <Typography className={classes.text} style={{ color: 'green' }}>{product?.discount}</Typography>
+              <Typography className={classes.text} style={{ opacity: '0.7' }}>{product?.tagline}</Typography>
             </Box>
           </Link>
           ))
